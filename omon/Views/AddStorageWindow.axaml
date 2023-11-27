@@ -1,0 +1,73 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="omon.Views.AddStorageWindow"
+        Width="800"
+        SystemDecorations="None"
+        WindowStartupLocation="CenterScreen"
+        Height="450"
+        CornerRadius="5"
+        BorderBrush="DarkGreen"
+        BorderThickness="1"
+        Title="">
+        <Window.Styles>
+                <Style Selector="TextBlock">
+                        <Setter Property="Foreground" Value="#fefff6"></Setter>
+                        <Setter Property="Effect">
+                                <DropShadowEffect Color="LawnGreen" OffsetX="0" OffsetY="0" BlurRadius="15" Opacity="1"></DropShadowEffect>
+                        </Setter>
+                </Style>
+                <Style Selector="TextBox">
+                        <Setter Property="SelectionBrush" Value="LawnGreen"></Setter>
+                        <Setter Property="BorderBrush" Value="Red"></Setter>
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Setter Property="Foreground" Value="#fefff6"></Setter>
+                        <Setter Property="Effect">
+                                <DropShadowEffect Color="Red" OffsetX="0" OffsetY="0" BlurRadius="15" Opacity="1"></DropShadowEffect>
+                        </Setter>
+                </Style>
+                <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Setter Property="BorderBrush" Value="DarkRed"></Setter>
+                </Style>
+                <Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="BorderBrush" Value="DarkRed"></Setter>
+                </Style>
+                <Style Selector="TextBox:focus">
+                        <Setter Property="TextElement.Foreground" Value="#fefff6"></Setter>
+                </Style>
+                <Style Selector="TextBox:pointerover">
+                        <Setter Property="TextElement.Foreground" Value="#fefff6"></Setter>
+                </Style>
+        </Window.Styles>
+        <Border BorderBrush="DarkGreen" BorderThickness="1">
+                <Grid Background="Black" RowDefinitions="*, *, *">
+                        <TextBlock VerticalAlignment="Center" Margin="60, 0, 0, 0" LetterSpacing="3" Grid.Row="0" FontSize="30" FontWeight="Bold">
+                                Добавление склада
+                        </TextBlock>
+                        <Grid Margin="80, 0, 50, 0" Grid.Row="1" RowDefinitions="*, *" ColumnDefinitions="*, *">
+                                        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0, 0, 0, 0" LetterSpacing="3" FontSize="30" FontWeight="Bold">
+                                                Название
+                                        </TextBlock>
+                                        <TextBox x:Name="nameText" Grid.Row="0"  Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0, 0, 0, 0" LetterSpacing="3" FontSize="30" FontWeight="Bold">
+                                        </TextBox>
+                                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0, 0, 0, 0" LetterSpacing="3" FontSize="30" FontWeight="Bold">
+                                        Адрес
+                                </TextBlock>
+                                <TextBox x:Name="addressText" Grid.Row="1"  Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0, 0, 0, 0" LetterSpacing="3" FontSize="30" FontWeight="Bold">
+                                </TextBox>
+                                </Grid>
+                        <Grid Margin="80, 20, 0, 0" Grid.Row="2" RowDefinitions="*, *">
+                                <TextBlock Grid.Row="0" x:Name="saveText" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0, 0, 0, 0" LetterSpacing="3" FontSize="30" FontWeight="Bold">
+                                        Добавить
+                                </TextBlock>
+                                <TextBlock Grid.Row="1" x:Name="cancelText" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0, 0, 0, 0" LetterSpacing="3" FontSize="30" FontWeight="Bold">
+                                        Отмена
+                                </TextBlock>
+                        </Grid>
+                        </Grid>
+        </Border>
+</Window>

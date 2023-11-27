@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="omon/App.axaml" value="omon/omon.csproj" />
+        <entry key="omon/Views/AddStorageWindow.axaml" value="omon/omon.csproj" />
+        <entry key="omon/Views/MainWindow.axaml" value="omon/omon.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
